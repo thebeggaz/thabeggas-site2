@@ -100,10 +100,28 @@ input,select,textarea{font-size:16px!important}
 
 </style>
 
+<style>
+/* Tha Beggas host: standard bar on every game page */
+.tb-gamebar{display:flex;justify-content:space-between;align-items:center;gap:12px;max-width:1100px;margin:0 auto 12px;padding:4px 0;font:700 12px/1 "Space Mono","IBM Plex Mono",ui-monospace,monospace;letter-spacing:1px;text-transform:uppercase;box-sizing:border-box}
+.tb-gamebar a{display:inline-flex;align-items:center;gap:8px;color:#E8B030;text-decoration:none;border:2px solid #E8B030;background:#111;padding:9px 12px;border-radius:4px;min-height:40px;box-sizing:border-box}
+.tb-gamebar a:hover,.tb-gamebar a:focus-visible{background:#E8B030;color:#111;outline:none}
+.tb-gamebar img{width:20px;height:20px;filter:invert(1)}
+.tb-framed .tb-gamebar{display:none}
+@media (orientation:landscape) and (max-height:540px){
+  .tb-gamebar{position:fixed;top:max(6px,env(safe-area-inset-top,0px));left:max(6px,env(safe-area-inset-left,0px));z-index:99999;margin:0;padding:0;max-width:none;width:auto}
+  .tb-gamebar a{padding:6px 9px;min-height:30px;font-size:10px;opacity:.88}
+  .tb-gamebar .tb-home{display:none}
+}
+</style>
+<nav class="tb-gamebar" aria-label="Tha Beggas">
+<a href="../" target="_top">&#9664; House of Traps</a>
+<a href="../../" target="_top" class="tb-home"><img src="../../assets/img/begga-face-sm.png" alt="" width="20" height="20"> Tha Beggas home</a>
+</nav>
+<script>if (window.top !== window) document.documentElement.classList.add('tb-framed');</script>
 <div class="wrap">
   <header>
     <div class="brand"><img class="temple" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHAAAABaCAYAAABg19IbAAACkUlEQVR42u2dO3rCMBCEWX8cwCnTpcwNuILLHDUlV/ANKNNRwg1I6y8xWLb12Mc/XVwokka7O2MtIAenuF0vj+nfb++f4nGdXQTynj2DQOXox+HQj4PnJfomMAKOnhd3P53dE+gyAucECyIGQCCAQGyEdwJfEeWRxC4KeV5J7CKR55HELhp53kiUaMSl+kYi0Ah51qOxs7bht+vlUWLDc45b80BI7ajZk65qbszWee5do/oaOCXBy/vJlmuS1gvWLDIszFM0nFoPaHXImqcw60S2LgNqapA1IrXUb9UiolVnmaWONtNGfrrRcz4u5VkpXwmBmUBXGoBAAIFAswotKSL6cSjWH6pBnapp7C0pNkqMraVpmBQKgCt47b/UujdSeqLPCn2U24jSd4VCJLYlWL2NiE5kaatRvScG0gBoFYFLkTk9uSnP5gRCq2dhjXzqR8EQRUoJBBAIgQACQTQVSmMvEQgg0Dlyf4gygpfLvc6lsWTNAGvy/LN/7P09YY51r9lzaRGNIJ8o6nIPCOoqWsmZJkB9K7I7qiCzrX8s3hMDKpShKBLfvVWBSHvESS7fB+p4y7+chOjZ9FxDBTFiW/zI2hAGulQrRj66kd9LvnWh1Ho9x5ILiRqpKXuRi2g1n9B9fH/8I1u+fsTa3GofWm7kjaNoBM6lCe9p1WwN3Ast6dLc3FrncW8qtPZeUQONAwIhEKhToVvqUqpRjapCSxl5ItA4ml8noUL37RERiIgB6kRMyfTGqzQiEKQSyM27fpH0MoX24zB7F7YF99M5Ob1oPThr5p/tW4IXxiGFeveBuaJm7iuzXp1qjVG4dL+550cjPXtlsDUCtRRq7AI1MKaNAAAAsErE8PbFloCiBhrHL2Yt/IGyrq8oAAAAAElFTkSuQmCC" alt="" width="84" height="68"><div>
-      <div class="kicker">From GRYSKLL Meets Tha Beggas · GRYSKLL Arcade</div>
+      <div class="kicker">From GRYSKLL Meets Tha Beggas · House of Traps</div>
       <h1>Begga <span>Kung Fu</span></h1>
       <div class="chapter">Chapter 1: <b>short aXe</b></div>
     </div></div>

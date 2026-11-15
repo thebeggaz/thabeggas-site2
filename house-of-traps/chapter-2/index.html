@@ -12,6 +12,24 @@ input,select,textarea{font-size:16px!important}
 @media (orientation:landscape) and (max-height:600px){.bkf2-host{padding:0 env(safe-area-inset-right,0px) 0 env(safe-area-inset-left,0px);max-width:none}}
 </style>
 </head><body><div class="bkf2-host">
+<style>
+/* Tha Beggas host: standard bar on every game page */
+.tb-gamebar{display:flex;justify-content:space-between;align-items:center;gap:12px;max-width:1100px;margin:0 auto 12px;padding:4px 0;font:700 12px/1 "Space Mono","IBM Plex Mono",ui-monospace,monospace;letter-spacing:1px;text-transform:uppercase;box-sizing:border-box}
+.tb-gamebar a{display:inline-flex;align-items:center;gap:8px;color:#E8B030;text-decoration:none;border:2px solid #E8B030;background:#111;padding:9px 12px;border-radius:4px;min-height:40px;box-sizing:border-box}
+.tb-gamebar a:hover,.tb-gamebar a:focus-visible{background:#E8B030;color:#111;outline:none}
+.tb-gamebar img{width:20px;height:20px;filter:invert(1)}
+.tb-framed .tb-gamebar{display:none}
+@media (orientation:landscape) and (max-height:540px){
+  .tb-gamebar{position:fixed;top:max(6px,env(safe-area-inset-top,0px));left:max(6px,env(safe-area-inset-left,0px));z-index:99999;margin:0;padding:0;max-width:none;width:auto}
+  .tb-gamebar a{padding:6px 9px;min-height:30px;font-size:10px;opacity:.88}
+  .tb-gamebar .tb-home{display:none}
+}
+</style>
+<nav class="tb-gamebar" aria-label="Tha Beggas">
+<a href="../" target="_top">&#9664; House of Traps</a>
+<a href="../../" target="_top" class="tb-home"><img src="../../assets/img/begga-face-sm.png" alt="" width="20" height="20"> Tha Beggas home</a>
+</nav>
+<script>if (window.top !== window) document.documentElement.classList.add('tb-framed');</script>
 
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Kalam:wght@400;700&family=IBM+Plex+Mono:wght@500&display=swap">
