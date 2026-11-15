@@ -315,3 +315,7 @@ a.card:hover { color: var(--ink); box-shadow: 6px 6px 0 var(--gold); }
 [data-v="2"] .card, [data-v="2"] .video, [data-v="2"] .cab { transition: transform .25s ease, box-shadow .25s ease; }
 [data-v="2"] a.card:hover, [data-v="2"] .video:hover { transform: translate(-3px, -3px); box-shadow: 9px 9px 0 var(--gold); }
 @media (prefers-reduced-motion: reduce) { [data-v="2"] .reveal { opacity: 1; transform: none; transition: none; } }
+.site-footer nav { gap: 10px; align-items: center; }
+.site-footer nav a.soc { display: inline-flex; align-items: center; justify-content: center; min-width: 44px; height: 44px; padding: 0 10px; border: 2px solid var(--line-dark); border-radius: 50%; font-size: 12px; transition: border-color .2s, transform .2s, background .2s; }
+.site-footer nav a.soc img { width: 22px; height: 22px; display: block; }
+.site-footer nav a.soc:hover, .site-footer nav a.soc:focus-visible { border-color: var(--gold); background: rgba(219,154,0,.18); transform: translateY(-2px); }
