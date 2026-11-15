@@ -238,8 +238,8 @@ cv.addEventListener('pointerdown',e=>{audioInit();cv.focus();const[x,y]=canvasXY
  if(state==='title'){for(const h of titleHits)if(inR(x,y,h.r)){h.fn();return}return}
  if(state==='end'){for(const h of endHits)if(inR(x,y,h.r)){h.fn();return}return}
  if(state!=='play')advance()});
-function shareText(){const s=Math.round((endT-stats.start)/1000);return `I broke ${stats.broken} distortions and ${lvl.share} in Begga Kung Fu Chapter 2 (${Math.floor(s/60)}:${String(s%60).padStart(2,'0')}). GRYSKLL Meets Tha Beggas. Play it in the GRYSKLL Arcade.`}
-function copyShare(){const t=shareText();try{navigator.clipboard.writeText(t).then(()=>{shareMsg='Copied. Paste it anywhere.'},()=>{shareMsg='Copy is blocked here. The text is above.'})}catch(e){shareMsg='Copy is blocked here. The text is above.'}}
+function shareText(){const s=Math.round((endT-stats.start)/1000);return `I broke ${stats.broken} distortions and ${lvl.share} in Begga Kung Fu Chapter 2 (${Math.floor(s/60)}:${String(s%60).padStart(2,'0')}). GRYSKLL Meets Tha Beggas. Play it in Tha Beggas House of Traps.`}
+function copyShare(){const t=shareText()+' '+location.origin+location.pathname.replace(/[^/]*$/,'');try{navigator.clipboard.writeText(t).then(()=>{shareMsg='Copied. Paste it anywhere.'},()=>{shareMsg='Copy is blocked here. The text is above.'})}catch(e){shareMsg='Copy is blocked here. The text is above.'}}
 
 /* ---------- update ---------- */
 function hitP(dmg){if(P.inv>0)return;P.focus-=dmg;P.inv=90;sfx('hurt');P.vx=-P.face*4;P.vy=-5;if(P.focus<=0){stats.deaths++;state='down'}}
