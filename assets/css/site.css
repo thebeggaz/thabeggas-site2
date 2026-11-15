@@ -319,3 +319,12 @@ a.card:hover { color: var(--ink); box-shadow: 6px 6px 0 var(--gold); }
 .site-footer nav a.soc { display: inline-flex; align-items: center; justify-content: center; min-width: 44px; height: 44px; padding: 0 10px; border: 2px solid var(--line-dark); border-radius: 50%; font-size: 12px; transition: border-color .2s, transform .2s, background .2s; }
 .site-footer nav a.soc img { width: 22px; height: 22px; display: block; }
 .site-footer nav a.soc:hover, .site-footer nav a.soc:focus-visible { border-color: var(--gold); background: rgba(219,154,0,.18); transform: translateY(-2px); }
+/* Menu as buttons */
+.nav { gap: 8px; font-size: 13px; }
+.nav a { padding: 9px 13px; border: 2px solid var(--ink); border-bottom-width: 2px; background: var(--card); min-height: 40px; display: inline-flex; align-items: center; transition: background .15s, color .15s, transform .15s; }
+.nav a:hover, .nav a:focus-visible { background: var(--ink); color: var(--paper); transform: translateY(-1px); }
+.nav a[aria-current="page"] { background: var(--gold); border-color: var(--ink); border-bottom-color: var(--ink); color: var(--ink); }
+.dark .nav a { border-color: var(--line-dark); background: var(--night-2); color: var(--paper); }
+.dark .nav a:hover, .dark .nav a:focus-visible { background: var(--paper); color: var(--ink); border-color: var(--paper); }
+.dark .nav a[aria-current="page"] { background: var(--gold); border-color: var(--gold); color: var(--ink); }
+@media (max-width: 760px) { .nav { gap: 6px; font-size: 12px; } .nav a { padding: 8px 10px; } }
